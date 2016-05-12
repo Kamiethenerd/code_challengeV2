@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+	{% block body %}
+			<h1>Week of Blank</h1>
+			<table id="currentEntries" method="get"></table><!--this table will display the current weeks tickets that have already been entered-->
+			<form id="addNew" action="addNew.php" method="post"><!--this form wil take in neew entries and add them to the database 
+							Select a date from a date picker
+							• Select a job/ticket from a list of assigned tickets retrieved from the API
+							• Enter the number of hours for the entry (each entry may not be more than 3 hours)
+							• Enter comments
+							• Select if the entry is billable to the end client or not-->
+					Date: <input type="date" name="date"><br>
+					Hours: <input type="number" name="hours" step=".25"><br>
+					Ticket:
+					Comments:
+					billable:
+					<input type="submit">Add</input>		
+			</form>
+	{% endblock %}
